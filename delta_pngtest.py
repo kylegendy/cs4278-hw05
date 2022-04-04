@@ -33,6 +33,7 @@ def setup(arr):
     file = open("./perc.txt")
     file.write(percentage)
     file.close()
+    print(percentage)
 
 # FUNCTION DEFINITIONS
 def reduce(arr):
