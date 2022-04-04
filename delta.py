@@ -9,6 +9,13 @@ for i in sys.argv[3::]:
     CONST_COMMAND += str(i)
 
 # FUNCTION DEFINITIONS
+def reduce(arr):
+    res = []
+    for i in arr:
+        if i not in res:
+            res.append(i)
+    return res
+
 def isInteresting(arr):
     # generate call
     call = CONST_COMMAND
@@ -23,10 +30,7 @@ def DD(P, arr):
     if (size <= 0):
         raise ValueError("size of array cannot be less than or equal to zero")
     elif (size == 1):
-        if (isInteresting(arr)):
-            return arr
-        else:
-            return []
+        return arr
     
     # partition
     p_index = int(size / 2)
@@ -34,12 +38,12 @@ def DD(P, arr):
     P_two = arr[p_index:]
     
     # divide and conquer
-    if (isInteresting(P + P_one)):
+    if (isInteresting(reduce(P + P_one))):
         return DD(P,P_one)
-    elif(isInteresting(P + P_two)):
+    elif(isInteresting(reduce(P + P_two))):
         return DD(P, P_two)
     else:
-        return DD(P + P_two, P_one) + DD(P + P_one, P_two)
+        return DD(reduce(P + P_two), P_one) + DD(reduce(P + P_one), P_two)
 
 # RUN THE SCRIPT
 base_arr = list(range(n))
