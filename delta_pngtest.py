@@ -17,7 +17,7 @@ def setup(arr):
 
     for i in arr:
         # compile and store data on each png
-        subprocess.call(pngTest_path + " " + testpng_dirPath + "/" + str(i) + ".png", shell=True)
+        subprocess.call(pngTest_path + "/pngtest " + testpng_dirPath + "/" + str(i) + ".png", shell=True)
         print('finished file: ' + str(i))
     
     # get output for the cumulative png file test inputs
