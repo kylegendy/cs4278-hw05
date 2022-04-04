@@ -21,7 +21,7 @@ def setup(arr):
         print('finished file: ' + str(i))
     
     # get output for the cumulative png file test inputs
-    subprocess.call("gcov *.c > " + testout_dirPath + "/gcov_output.txt", shell=True)
+    subprocess.call("gcov " + pngTest_path + "/*.c > " + testout_dirPath + "/gcov_output.txt", shell=True)
     # store percentages png cumulativee
     file = open(testout_dirPath + "/gcov_output.txt")	
     content = file.readlines()
