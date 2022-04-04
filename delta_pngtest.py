@@ -7,6 +7,7 @@ n = int(sys.argv[1])
 CONST_COMMAND = "./is-pngtest.sh"
 
 # PRE-FUNCTIONS -- FIND BASE PERCENTAGE
+# get the percentage to act as a threshold
 def setup(arr):
     testpng_dirPath = "./libpng/large-png-suite"
     testout_dirPath = "./libpng"

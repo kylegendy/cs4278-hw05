@@ -3,6 +3,7 @@ import os
 
 # READ IN THE FLAGS
 n = int(sys.argv[1])
+
 CONST_COMMAND = str(sys.argv[2])
 for i in sys.argv[3::]:
     CONST_COMMAND += " "

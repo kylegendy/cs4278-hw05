@@ -11,15 +11,15 @@ cp -r libpng/libpng-1.6.34/ libpng/deriv/
 # done < "$thresh_input"
 
 # # pngtest all input
-# for i in $* ; do
-#   libpng/deriv/pngtest libpng/large-png-suite/1.png
-# done
+for i in $* ; do
+  libpng/deriv/pngtest libpng/large-png-suite/$i.png
+done
 
-# check if gcov gets bad result
-./libpng/deriv/pngtest ./libpng/large-png-suite/1.png ./libpng/deriv/
+# check results
 gcov libpng/deriv/*.c 
+# HOW TO CHECK IF FILE RAN FINE??? WHERES THE LINES RAN OUTPUT??
 
-# remove all .gcov files
+# clean up -- remove all .gcov files
 rm -r *.gcov
 
 exit 0
