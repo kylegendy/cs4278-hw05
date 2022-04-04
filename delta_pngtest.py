@@ -13,7 +13,7 @@ def setup(arr):
     pngTest_path = "./libpng/deriv"
 
     # remove deriv directory if present, and then copy a new one
-    subprocess.call("rm -r " + pngTest_path + " && cp -r " + testout_dirPath + "/libpng-1.6.34/ " + pngTest_path, shell=True)
+    subprocess.call("rm -r -y " + pngTest_path + " && cp -r " + testout_dirPath + "/libpng-1.6.34/ " + pngTest_path, shell=True)
 
     for i in arr:
         # compile and store data on each png
