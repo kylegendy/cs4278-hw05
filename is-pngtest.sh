@@ -16,7 +16,7 @@ cp -r libpng/libpng-1.6.34/ libpng/deriv/
 # done
 
 # check if gcov gets bad result
-libpng/deriv/pngtest libpng/large-png-suite/1.png libpng/deriv/
+./libpng/deriv/pngtest ./libpng/large-png-suite/1.png ./libpng/deriv/
 gcov libpng/deriv/*.c 
 
 exit 0
